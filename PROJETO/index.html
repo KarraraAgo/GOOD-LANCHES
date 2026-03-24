@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOD LANCHES - O Brabo da Região</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-instagram"></i>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>GOOD <span>LANCHES</span></h1>
+            </div>
+            <button id="cart-btn" onclick="toggleCart()">
+                🛒 Meu Pedido (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button onclick="toggleCart()">Fechar</button>
+        </div>
+        <div id="cart-items">
+            <p class="empty-msg">O carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="btn-finalizar" onclick="enviarPedido()">Finalizar pelo WhatsApp</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Bateu a fome?</h2>
+            <p>Lanche feito na hora, bem servido e com ingrediente de qualidade. Escolha o seu abaixo.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h3 class="menu-title">Cardápio do Dia</h3>
+        
+        <div class="cardapio-grid">
+            <div class="item-card">
+                <img src="img/x-tudo.jpg" alt="X-Tudo completo">
+                <div class="item-info">
+                    <h4>X-Tudo da Casa</h4>
+                    <p>Hambúrguer, ovo, bacon, presunto, queijo, salada e milho. O legítimo.</p>
+                    <span class="preco">R$ 28,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/bacon-burger.jpg" alt="Hambúrguer com muito bacon">
+                <div class="item-info">
+                    <h4>Bacon Supremo</h4>
+                    <p>Pra quem gosta de bacon de verdade. Duas fatias de queijo derretido.</p>
+                    <span class="preco">R$ 24,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/smash.jpg" alt="Smash burger">
+                <div class="item-info">
+                    <h4>Smash Simples</h4>
+                    <p>Carne prensada na chapa, cebola e queijo. Direto ao ponto.</p>
+                    <span class="preco">R$ 18,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/frango.jpg" alt="Lanche de frango">
+                <div class="item-info">
+                    <h4>Frango Especial</h4>
+                    <p>Filé de frango grelhado, maionese da casa e alface fresquinha.</p>
+                    <span class="preco">R$ 22,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/batata.jpg" alt="Porção de batata frita">
+                <div class="item-info">
+                    <h4>Batata Grande</h4>
+                    <p>Porção caprichada, sequinha e crocante. Serve duas pessoas.</p>
+                    <span class="preco">R$ 15,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/calabresa.jpg" alt="Lanche de calabresa">
+                <div class="item-info">
+                    <h4>X-Calabresa</h4>
+                    <p>Muita calabresa acebolada com queijo prato no pão de hambúrguer.</p>
+                    <span class="preco">R$ 20,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/combo.jpg" alt="Combo promocional">
+                <div class="item-info">
+                    <h4>Combo Família</h4>
+                    <p>2 X-Burgers + 1 Batata Média + 1 Coca 2 Litros.</p>
+                    <span class="preco">R$ 65,00</span>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/suco.jpg" alt="Suco natural">
+                <div class="item-info">
+                    <h4>Suco de Laranja</h4>
+                    <p>Copo de 500ml feito na hora. Geladinho.</p>
+                    <span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>GOOD LANCHES</strong></p>
+            <p>Rua da Galera, 123 - Bairro Central</p>
+            <p>Aceitamos cartões e Pix</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511999999999" class="btn-float btn-whatsapp" target="_blank">WhatsApp</a> 
+  
+    <a href="https://instagram.com/goodlanches" class="btn-float btn-instagram" target="_blank">Instagram</a>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>
+
+<script>
+// Substituição do cardápio por promoções
+(function() {
+    const mainContainer = document.querySelector('main.container');
+    if (mainContainer) {
+        mainContainer.innerHTML = `
+        <h3 class="menu-title">🔥 PROMOÇÕES DO DIA</h3>
+        
+        <div class="cardapio-grid">
+            <div class="item-card">
+                <img src="img/coxinha.jpg" alt="Coxinha">
+                <div class="item-info">
+                    <h4>🎉 Coxinha - Leve 2 por R$ 5,00</h4>
+                    <p>Promoção imperdível! 2 coxinhas deliciosas por apenas R$ 5,00.</p>
+                    <div class="item-footer">
+                        <span class="preco">R$ 5,00</span>
+                        <button class="btn-add" onclick="adicionar('Coxinha - Leve 2 por R$ 5,00', 5.00)">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/pizza.jpg" alt="Pizza">
+                <div class="item-info">
+                    <h4>🍕 2 Pizzas Grandes</h4>
+                    <p>2 pizzas grandes com sabores à sua escolha. Promoção especial!</p>
+                    <div class="item-footer">
+                        <span class="preco">R$ 40,00</span>
+                        <button class="btn-add" onclick="adicionar('2 Pizzas Grandes', 40.00)">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/pastel.jpg" alt="Pastel">
+                <div class="item-info">
+                    <h4>🥟 Promoção Pastel - 3 Pasteis</h4>
+                    <p>3 pasteis com: Calabresa, Frango, Mussarela, Carne, Queijo Mussarela + Opcionais completos!</p>
+                    <div class="item-footer">
+                        <span class="preco">R$ 21,00</span>
+                        <button class="btn-add" onclick="adicionar('Promoção Pastel - 3 Pasteis', 21.00)">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/combo-coxinha.jpg" alt="Combo Coxinha">
+                <div class="item-info">
+                    <h4>🍗 Combo Coxinha + Coca</h4>
+                    <p>3 coxinhas de frango + 1 Coca-Cola de 1,5 litro. Perfeito para dividir!</p>
+                    <div class="item-footer">
+                        <span class="preco">R$ 40,00</span>
+                        <button class="btn-add" onclick="adicionar('Combo Coxinha + Coca 1,5L', 40.00)">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="img/pastel-variedade.jpg" alt="Pastel Variedade">
+                <div class="item-info">
+                    <h4>🥟 3 Pasteis com 9 Opcionais</h4>
+                    <p>3 pasteis recheados com 9 opcionais à sua escolha. Muita variedade!</p>
+                    <div class="item-footer">
+                        <span class="preco">R$ 21,00</span>
+                        <button class="btn-add" onclick="adicionar('3 Pasteis com 9 Opcionais', 21.00)">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    }
+})();
+</script>
