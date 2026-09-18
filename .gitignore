@@ -1,0 +1,19 @@
+# Dependências e arquivos gerados
+node_modules/
+dist/
+build/
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Arquivos compactados locais
+*.zip
+*.rar
